@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseFlow | Personal Finance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>ExpenseFlow</h1>
+        <p>Manage your money smarter.</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p id="total-expenses">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Transactions</h3>
+                <p id="transaction-count">0</p>
+            </div>
+        </section>
+
+        <section class="expense-form">
+            <h2>Add an Expense</h2>
+
+            <form id="expense-form">
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount (₹)"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Education">Education</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Description"
+                    maxlength="200"
+                    required
+                >
+
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="transactions">
+            <h2>Recent Transactions</h2>
+
+            <ul id="expense-list">
+                <li>No expenses yet. Add your first one!</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
